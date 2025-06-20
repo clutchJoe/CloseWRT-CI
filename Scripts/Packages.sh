@@ -69,6 +69,17 @@ UPDATE_PACKAGE "qmodem" "FUjr/QModem" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
+UPDATE_PACKAGE "istore" "linkease/istore" "main"
+UPDATE_PACKAGE "nas" "linkease/nas-packages" "master"
+UPDATE_PACKAGE "nas_luci" "linkease/nas-packages-luci" "main"
+
+UPDATE_PACKAGE "dae" "sbwml/luci-app-dae" "main"
+UPDATE_PACKAGE "v2ray-geodata" "sbwml/v2ray-geodata" "master"
+
+UPDATE_PACKAGE "daed" "QiuSimons/luci-app-daed" "master"
+# follow from https://github.com/QiuSimons/luci-app-daed
+mkdir -p libcron && wget -O libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
+
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
